@@ -1,7 +1,13 @@
 import React from 'react';
 import logo from '../assets/g.png';
-import { Gauge } from 'lucide-react';
+import { Gauge, Plus, Cpu, LayoutList} from 'lucide-react';
+import { PiStudent } from "react-icons/pi";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { MdOutlineClass } from "react-icons/md";
+import { MdOutlineNoteAlt } from "react-icons/md";
+import { MdPayment } from "react-icons/md";
 export default function Sidebar() {
+    const [active , setActive] = useState(false);
   const gradeintColor = {
     background: 'rgb(10,12,66)',
     background: 'linear-gradient(0deg, rgba(10,12,66,1) 0%, rgba(35,20,97,1) 100%)',
@@ -15,37 +21,37 @@ export default function Sidebar() {
     },
     {
       name: 'Students',
-      icon: '',
+      icon: <PiStudent />,
       active_color: '',
     },
     {
       name: 'Teachers',
-      icon: '',
+      icon: <Cpu />,
       active_color: '',
     },
     {
       name: 'Class',
-      icon: '',
+      icon: <MdOutlineClass />,
       active_color: '',
     },
     {
       name: 'Attendance',
-      icon: '',
+      icon:<FaRegCalendarAlt />,
       active_color: '',
     },
     {
       name: 'Examination',
-      icon: '',
+      icon: <MdOutlineNoteAlt />,
       active_color: '',
     },
     {
       name: 'Payment',
-      icon: '',
+      icon:<MdPayment />,
       active_color: '',
     },
     {
       name: 'Expanses',
-      icon: '',
+      icon: <LayoutList />,
       active_color: '',
     },
   ];
@@ -58,8 +64,12 @@ export default function Sidebar() {
       </div>
       <div className="flow flex flex-col w-[100%] mt-2">
         {listItems.map((item, index) => (
-          <div className='w-[100%] h-[2.3rem] mb-[0.2rem] bg-[#ffffff3c] flex items-center justify-center border-sm' key={index}>
-            <p className='text-white'>{item.name}</p>
+          <div className='w-[100%] h-[2.3rem] mb-[0.2rem] bg-[#ffffff3c] text-[1rem] flex items-center justify-between border-sm' key={index}>
+            <div className="flex items-center ml-[1rem]">
+                {item.icon}
+                <p className='text-white ml-[0.5rem]'>{item.name}</p>
+            </div>
+            <Plus className="mr-[0.5rem]" />
           </div>
         ))}
       </div>
