@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/g.png';
-
+import { Gauge } from 'lucide-react';
 export default function Sidebar() {
   const gradeintColor = {
     background: 'rgb(10,12,66)',
@@ -10,7 +10,7 @@ export default function Sidebar() {
   const listItems = [
     {
       name: 'Dashboard',
-      icon: '',
+      icon: <Gauge />,
       active_color: '',
     },
     {
@@ -52,13 +52,13 @@ export default function Sidebar() {
 
   return (
     <div style={gradeintColor} className='h-full w-[20rem] text-white flex flex-col items-start justify-start'>
-      <div className="logo flex items-center w-full border-b-[1px] px-[0.5rem] pb-[1rem]">
+      <div className="logo flex items-center w-[90%] border-b-[1px] m-[0.5rem] pb-[1rem]">
         <img className='w-[20%] ml-[1rem]' src={logo} alt="" />
         <h1 className='mx-[0.5rem] text-2xl font-bold'>Educkart</h1>
       </div>
-      <div className="flow flex flex-col w-full">
+      <div className="flow flex flex-col w-[100%] mt-2">
         {listItems.map((item, index) => (
-          <div className='w-full h-[2rem] my-[0.2rem] bg-gray-600 flex items-center justify-center border-sm' key={index}>
+          <div className='w-[100%] h-[2.3rem] mb-[0.2rem] bg-[#ffffff3c] flex items-center justify-center border-sm' key={index}>
             <p className='text-white'>{item.name}</p>
           </div>
         ))}
