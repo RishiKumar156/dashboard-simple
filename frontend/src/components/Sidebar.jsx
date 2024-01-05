@@ -82,8 +82,8 @@ export default function Sidebar() {
           </div>
         ))}
       </div>
-            <div className="log fixed text-[1rem] bottom-[3rem] left-[3rem]  group ease-in-out text-[#ffffff3c] flex items-center">
-                <LogOut className="w[40px] h-[40px] group-hover:text-white transition-all duration-300" /> <p className='pl-[0.5rem] group-hover:text-white transition-all duration-300' >Logout Out</p>
+            <div className="log fixed text-[1rem] bottom-[3rem] left-[4.5rem]  group ease-in-out text-[#ffffff3c] flex items-center">
+                <LogOut className="w[40px] h-[40px] group-hover:text-white transition-all duration-300" /> <p className='pl-[0.5rem] group-hover:text-white transition-all duration-300' >Logout</p>
             </div>
     </div>
   );
