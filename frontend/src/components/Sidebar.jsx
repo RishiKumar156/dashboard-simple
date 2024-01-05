@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../assets/g.png';
-import { Gauge, Plus, Cpu, LayoutList } from 'lucide-react';
+import { Gauge, Plus, Cpu, LayoutList, LogOut } from 'lucide-react';
 import { PiStudent } from "react-icons/pi";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { MdOutlineClass } from "react-icons/md";
@@ -82,6 +82,9 @@ export default function Sidebar() {
           </div>
         ))}
       </div>
+            <div className="log fixed text-[1rem] bottom-[3rem] left-[3rem]  group ease-in-out text-[#ffffff3c] flex items-center">
+                <LogOut className="w[40px] h-[40px] group-hover:text-white transition-all duration-300" /> <p className='pl-[0.5rem] group-hover:text-white transition-all duration-300' >Logout Out</p>
+            </div>
     </div>
   );
 }
