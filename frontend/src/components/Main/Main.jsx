@@ -28,7 +28,21 @@ export default function Main() {
           <button className="btn5 px-[1rem] py-[0.4rem] ml-[1rem] text-[#d9deff] font-semibold">IAMT status</button>
           <button className="btn5 px-[1rem] py-[0.4rem] ml-[1rem] text-[#d9deff] font-semibold">Transport</button>
         </div>
-        <h1 className='font-bold text-[1rem] p-[1rem]' >Today Progress</h1>      
+        <h1 className='font-bold text-[1rem] p-[1rem]' >Today Progress</h1>   
+        <div className="flex w-[100%] h-[75.2%]">
+          <div className="flex items-center w-[75%]">
+            <div className="flex h-[100%] w-[100%]">
+              <div className="flex w-[60%] h-[30%] bg-[lightgreen]">
+                <div className="w-[50%] h-[90%] bg-[#a8a8c8] m-[0.5rem] rounded-sm mr-[0]"></div>
+                <div className="w-[50%] h-[90%] bg-[#a8a8c8] m-[0.5rem] rounded-sm"></div>
+              </div>
+              <div className="flex w-[40%] h-[50%] bg-[#a8a8c8]"></div>
+            </div>
+          </div>
+          <div className="flex items-center w-[25%] bg-[green]">
+            <div className="flex"></div>
+          </div>
+        </div>   
         </div>
     </div>
   )
